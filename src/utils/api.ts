@@ -4,12 +4,12 @@ if (!resolved_url) {
   if (typeof window !== "undefined") {
     const port = window.location.port;
     if (port === "3000" || port === "3001" || port === "3002") {
-      resolved_url = "http://localhost:8000";
+      resolved_url = "http://localhost:8001";
     } else {
       resolved_url = "";
     }
   } else {
-    resolved_url = "http://localhost:8000";
+    resolved_url = "http://localhost:8001";
   }
 }
 

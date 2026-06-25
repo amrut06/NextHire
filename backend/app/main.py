@@ -126,4 +126,5 @@ if os.path.exists(frontend_dir):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=settings.BACKEND_PORT, reload=True)
+    port = settings.PORT or settings.BACKEND_PORT
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=True)

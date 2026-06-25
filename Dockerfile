@@ -4,6 +4,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
+# Set empty API URL so frontend uses relative paths in production
+ENV NEXT_PUBLIC_API_URL=""
 RUN npm run build
 
 # Stage 2: Serve the application using Python & FastAPI
@@ -20,6 +22,8 @@ COPY backend/ ./backend
 # Copy static frontend build from builder stage
 COPY --from=builder /app/out ./out
 
-# Run uvicorn on Railway's assigned port
+# Railway assigns PORT dynamically
 ENV PORT=8000
-CMD ["sh", "-c", "cd backend && uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
+EXPOSE ${PORT}
+
+CMD ["sh", "-c", "cd backend && python3 -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]

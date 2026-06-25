@@ -1,11 +1,6 @@
 # 🧠 NextHire - AI Hiring Intelligence Platform
 
-![AI Powered](https://img.shields.io/badge/AI-POWERED-green?style=for-the-badge)
-![Next.js](https://img.shields.io/badge/NEXT.JS-FRONTEND-blue?style=for-the-badge)
-![FastAPI](https://img.shields.io/badge/FASTAPI-BACKEND-green?style=for-the-badge)
-![Gemini](https://img.shields.io/badge/GEMINI-AI-orange?style=for-the-badge)
-![Adaptive](https://img.shields.io/badge/ADAPTIVE-INTERVIEWS-purple?style=for-the-badge)
-![Smart](https://img.shields.io/badge/SMART-HIRING-blue?style=for-the-badge)
+NextHire is an AI-powered hiring platform that helps recruiters and candidates through resume analysis, job description matching, adaptive interviews, skill verification, and intelligent hiring insights.
 
 ## ✨ Features
 
